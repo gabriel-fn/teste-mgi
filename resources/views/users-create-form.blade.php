@@ -23,19 +23,19 @@
                     <div class="card-body">
                         <form id="formUser">
                             <div class="form-floating mb-4">
-                                <input id="name" type="text" name="name" class="form-control" placeholder="Seu nome aqui..." required>
+                                <input id="name" type="text" name="name" class="form-control">
                                 <label for="name">Nome</label>
                             </div>
                             <div class="form-floating my-4">
-                                <input id="email" type="email" name="email" class="form-control" placeholder="nome@exemplo.com" required>
+                                <input id="email" type="email" name="email" class="form-control">
                                 <label for="email">E-mail</label>
                             </div>
                             <div class="form-floating my-4">
-                                <input id="password" type="password" name="password" class="form-control" placeholder="Senha" required>
+                                <input id="password" type="password" name="password" class="form-control">
                                 <label for="password">Senha</label>
                             </div>
                             <div class="form-floating my-4">
-                                <input id="password_confirmation" type="password" name="password_confirmation" class="form-control" placeholder="Confirmar senha" required>
+                                <input id="password_confirmation" type="password" name="password_confirmation" class="form-control">
                                 <label for="password_confirmation">Confirmar senha</label>
                             </div>
 
