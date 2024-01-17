@@ -92,9 +92,17 @@ APP_PORT=8081
 
 ## 🔧 Testes
 
-Para executar os teste, digite o seguinte comando no terminal: `php artisan test`
+Para executar os teste, digite o seguinte comando no terminal: 
 
-E caso esteja rodando a aplicação em ambiente Docker, execute o comando utilizando o sail: `./vendor/bin/sail artisan test`
+```
+php artisan test --testsuite=Feature
+```
+
+E caso esteja rodando a aplicação em ambiente Docker, execute o comando utilizando o sail: 
+
+```
+./vendor/bin/sail artisan test --testsuite=Feature
+```
 
 ---
 ⌨️ com ❤️ por [Gabriel Nascimento](https://www.linkedin.com/in/gabriel-fn/) 😊
