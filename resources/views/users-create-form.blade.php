@@ -39,7 +39,7 @@
                                 <label for="password_confirmation">Confirmar senha</label>
                             </div>
 
-                            <button class="w-100 btn btn-lg btn-primary" onclick="registerUser(event)">Cadastrar</button>
+                            <button class="w-100 btn btn-lg btn-primary" onclick="registerUser(this, event)">Cadastrar</button>
                         </form>
                     </div>
                 </div>
@@ -48,8 +48,10 @@
         </div>
 
         <script type="text/javascript">
-            function registerUser(e) {
-                e.preventDefault();
+            function registerUser(elem, ev) {
+                ev.preventDefault();
+                elem.disabled = true;
+
                 const formUser = document.getElementById('formUser');
                 const formUserData = new FormData(formUser);
                 const feedbackMessage = document.getElementById('feedbackMessage')
@@ -77,6 +79,9 @@
                 .catch(error => {
                     feedbackMessage.className = 'alert alert-danger';
                     feedbackMessage.textContent = error.message;
+                })
+                .finally(() => {
+                    elem.disabled = false;
                 });
             }
         </script>
