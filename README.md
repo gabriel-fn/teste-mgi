@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://pessoal.ufrj.br/wp-content/uploads/2023/07/govbr.jpeg" width="400"></a></p>
+<p align="center"><img src="https://yt3.googleusercontent.com/RJ8DYV_O9Vx9-V3oy0XmRhIa1Nvog0L4XdE-Z6Kj6UjgQweMnZXBm16Z1mLuR3zuiHi8xQ_ArQ=s900-c-k-c0x00ffffff-no-rj" width="200"></p>
 
 <p align="center">Aplicação para processo seletivo do Ministério da Gestão e da Inovação! 🚀</p>
 
@@ -67,12 +67,12 @@ Você precisa configurar as variáveis da aplicação e do banco de dados no arq
 ```
 ...
 
-DB_CONNECTION=mysql
+DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=homestead
-DB_USERNAME=homestead
-DB_PASSWORD=secret
+DB_PORT=5432
+DB_DATABASE=teste_mgi
+DB_USERNAME=root
+DB_PASSWORD=
 
 ...
 ```
@@ -83,11 +83,18 @@ Também fique atento a outras variáveis importantes da aplicação (e altere el
 ...
 
 APP_ENV=local
-APP_URL=http://localhost
 APP_DEBUG=true
+APP_URL=http://localhost:8081
+APP_PORT=8081
 
 ...
 ```
+
+## 🔧 Testes
+
+Para executar os teste, digite o seguinte comando no terminal: `php artisan test`
+
+E caso esteja rodando a aplicação em ambiente Docker, execute o comando utilizando o sail: `./vendor/bin/sail artisan test`
 
 ---
 ⌨️ com ❤️ por [Gabriel Nascimento](https://www.linkedin.com/in/gabriel-fn/) 😊
